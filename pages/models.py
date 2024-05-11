@@ -39,3 +39,14 @@ class MetaData(models.Model):
     facebook = models.CharField(max_length=100)
     officeLocation = models.CharField(max_length=400)
     email = models.CharField(max_length=300)
+
+
+class Project(models.Model):
+    name = models.CharField(max_length=250)
+    completeStatus = models.BooleanField()
+    image = models.ImageField(upload_to="images", default="default.jpeg")
+    description = models.TextField()
+    year = models.CharField(max_length=4)
+
+    def __str__(self):
+        return self.name

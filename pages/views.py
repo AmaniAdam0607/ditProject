@@ -27,3 +27,11 @@ def newsPage(request):
 def newsDetailsPage(request, id):
     post = Post.objects.get(id=id)
     return render(request, "news-details.html", {"post": post})
+
+
+def projectPage(request):
+    return render(request, "project.html")
+
+
+def projectDetail(request):
+    return render(request, "project-detail.html")
