@@ -3,251 +3,80 @@
 
 
 {% block content %}
+<main>
 
-        <header class="site-header">
-            <div class="container">
-                <div class="row">
-                    
-                    <div class="col-lg-12 col-12 d-flex flex-wrap">
-                        <p class="d-flex me-4 mb-0">
-                            <i class="bi-house-fill me-2"></i>
-                            DIT Design Studio
-                        </p>
+    <section class="banner-section d-flex justify-content-center align-items-end">
+        <div class="section-overlay"></div>
 
-                        <p class="d-flex d-lg-block d-md-block d-none me-4 mb-0">
-                            <i class="bi-clock-fill me-2"></i>
-                            <strong class="me-2">Mon - Fri</strong> 8:00 AM - 5:30 PM
-                        </p>
+        <div class="container">
+            <div class="row">
 
-                        <p class="site-header-icon-wrap text-white d-flex mb-0 ms-auto">
-                            <i class="site-header-icon bi-whatsapp me-2"></i>
-
-                            <a href=" +255718894449" class="text-white">
-                                +255718894449
-                            </a>
-                        </p>
-                    </div>
-
+                <div class="col-lg-7 col-12">
+                    <h1 class="text-white mb-lg-0">About Us</h1>
                 </div>
+
+                <div class="col-lg-4 col-12 d-flex justify-content-lg-end align-items-center ms-auto">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb justify-content-center">
+                            <li class="breadcrumb-item"><a href={% url 'home' %}>Home</a></li>
+
+                            <li class="breadcrumb-item active" aria-current="page">About Us</li>
+                        </ol>
+                    </nav>
+                </div>
+
             </div>
-        </header>
+        </div>
+    </section>
 
-        <nav class="navbar navbar-expand-lg">
-            <div class="container">
-                <a class="navbar-brand" href="index.html">
-                    <img src="{% static 'images/bubbles.png' %}" class="logo img-fluid" alt="">
 
-                    <span class="ms-2">Design Studio</span>
-                </a>
+    <section class="section-padding">
+        <div class="container">
+            <div class="row">
 
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item">
-                            <a class="nav-link active" href="index.html">Home</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="about.html">About Us</a>
-                        </li>
-
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#section_5" id="navbarLightDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">Our Services</a>
-
-                            <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarLightDropdownMenuLink">
-                                <li><a class="dropdown-item" href="services-detail.html">Education and Training</a></li>
-
-                                <li><a class="dropdown-item" href="PCB.html">PCB Design and Development</a></li>
-
-                                <li><a class="dropdown-item" href="CNC.html">CNC Machining and Laser Cutting</a></li>
-
-                                <li><a class="dropdown-item" href="prototyping.html">Prototyping and Testing</a></li>
-
-                                <li><a class="dropdown-item" href="application.html">Application Development</a></li>
-
-                                <li><a class="dropdown-item" href="software.html">Software developent</a></li>
-
-                                <li><a class="dropdown-item" href="CAD.html">CAM/CAD services</a></li>
-
-                                <li><a class="dropdown-item" href="3D.html">3D Printing and Scanning</a></li>
-                            </ul>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="news.html">News</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="contact.html">contact</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="projects.html">Projects</a>
-                        </li>
-
-                        <li class="nav-item ms-3">
-                            <a class="nav-link custom-btn custom-border-btn custom-btn-bg-white btn" href="about.html">Get started</a>
-                        </li>
-                    </ul>
+                <div class="col-lg-6 col-12">
+                    <img src="{% static 'images/cleaning-concept-with-man-showing-business-card.jpg' %}"
+                        class="featured-image img-fluid">
                 </div>
-            </div>
-        </nav>
 
-        <main>
+                <div class="col-lg-6 col-12">
+                    <div class="featured-block">
+                        <h2 class="mb-4">DIT Design Studio</h2>
 
-            <section class="banner-section d-flex justify-content-center align-items-end">
-                <div class="section-overlay"></div>
+                        <p>Design Studio The DIT Design Studio is the result of a collaboration between the Dar es
+                            Salaam Institute of Technology (DIT) and Rice 360° Institute for Global Health (Rice 360°)
+                            with support from the Lemelson Foundation. It follows from both institutes’ commitment to
+                            the advancement of students’ practical professional skills.<a href="#"></a></p>
 
-                <div class="container">
-                    <div class="row">
+                        <p>The DIT curriculum embodies the ‘teaching factory’ approach, where technical training is
+                            directly linked to real-life industry. Similarly, the Rice 360° Institute’s Leading in
+                            Invention Education workstream is focused on expanding and sharing their model of invention
+                            and entrepreneurship education. These synergistic approaches have led to their collaboration
+                            that includes faculty development workshops, international student exchanges and
+                            internships, and the Design Studio – a focal point for active learning and innovative
+                            thinking.</p>
 
-                        <div class="col-lg-7 col-12">
-                            <h1 class="text-white mb-lg-0">About Us</h1>
-                        </div>
+                        <a class="custom-btn btn button button--atlas mt-3" href={% url 'home' %}>
+                            <span>Get in touch</span>
 
-                        <div class="col-lg-4 col-12 d-flex justify-content-lg-end align-items-center ms-auto">
-                            <nav aria-label="breadcrumb">
-                                <ol class="breadcrumb justify-content-center">
-                                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-
-                                    <li class="breadcrumb-item active" aria-current="page">About Us</li>
-                                </ol>
-                            </nav>
-                        </div>
-
-                    </div>
-                </div>
-            </section>
-         
-
-            <section class="section-padding">
-                <div class="container">
-                    <div class="row">
-
-                        <div class="col-lg-6 col-12">
-                            <img src="{% static 'images/cleaning-concept-with-man-showing-business-card.jpg' %}" class="featured-image img-fluid">
-                        </div>
-
-                        <div class="col-lg-6 col-12">
-                            <div class="featured-block">
-                                <h2 class="mb-4">DIT Design Studio</h2>
-
-                                <p>Design Studio The DIT Design Studio is the result of a collaboration between the Dar es Salaam Institute of Technology (DIT) and Rice 360° Institute for Global Health (Rice 360°) with support from the Lemelson Foundation. It follows from both institutes’ commitment to the advancement of students’ practical professional skills.<a href="#"></a></p>
-
-                                <p>The DIT curriculum embodies the ‘teaching factory’ approach, where technical training is directly linked to real-life industry. Similarly, the Rice 360° Institute’s Leading in Invention Education workstream is focused on expanding and sharing their model of invention and entrepreneurship education. These synergistic approaches have led to their collaboration that includes faculty development workshops, international student exchanges and internships, and the Design Studio – a focal point for active learning and innovative thinking.</p>
-
-                                <a class="custom-btn btn button button--atlas mt-3" href="contact.html">
+                            <div class="marquee" aria-hidden="true">
+                                <div class="marquee__inner">
                                     <span>Get in touch</span>
-    
-                                    <div class="marquee" aria-hidden="true">
-                                        <div class="marquee__inner">
-                                            <span>Get in touch</span>
-                                            <span>Get in touch</span>
-                                            <span>Get in touch</span>
-                                            <span>Get in touch</span>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </section>
-
-
-            <section class="team-section section-padding section-bg">
-                <div class="container">
-                    <div class="row">
-
-                        <div class="col-lg-12 col-12">
-                            <h2 class="mb-4">Meet Team</h2>
-                        </div>
-
-                        <div class="col-lg-3 col-md-6 col-12 mb-lg-0 mb-md-5">
-                            <img src="{% static 'images/teams/young-cleaning-man-wearing-casual-clothes.jpg' %}" class="team-image img-fluid">
-                        </div>
-
-                        <div class="col-lg-3 col-md-6 col-12 d-flex justify-content-lg-center mt-4 mt-lg-0 mt-md-0 mb-5 mb-lg-0">
-                            <div class="team-info mx-auto mx-lg-0">
-                                <h4 class="mb-2">Joel</h4>
-
-                                <p> The Trainer and coordinator of the DIT Design Studio who organises and prepare for all issues concerning the Lab</p>
-
-                                <div class="border-top mt-3 pt-3">
-                                    <p class="d-flex mb-0">
-                                        <i class="bi-whatsapp me-2"></i>
-
-                                        <a href="tel: 110-220-9800">
-                                            110-220-9800
-                                        </a>
-                                    </p>
+                                    <span>Get in touch</span>
+                                    <span>Get in touch</span>
+                                    <span>Get in touch</span>
                                 </div>
                             </div>
-                        </div>
-
-                         <div class="col-lg-3 col-md-6 col-12">
-                            <img src="{% static 'images/teams/happy-young-woman-wiping-kitchen-counter-wearing-yellow-gloves.jpg' %}" class="team-image img-fluid">
-                        </div>
-
-                        <div class="col-lg-3 col-md-6 col-12 d-flex justify-content-lg-center mt-4 mt-lg-0 mt-md-0">
-                            <div class="team-info mx-auto mx-lg-0">
-                                <h4 class="mb-2">Marie</h4>
-
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing tempor incididunt dolore magna</p>
-
-                                <div class="border-top mt-3 pt-3">
-                                    <p class="d-flex mb-0">
-                                        <i class="bi-whatsapp me-2"></i>
-
-                                        <a href="tel: 110-220-9800">
-                                            110-220-9800
-                                        </a>
-                                    </p>
-                                </div>
-                            </div>
-                        </div> 
-
+                        </a>
                     </div>
                 </div>
-            </section>
+
+            </div>
+        </div>
+    </section>
+</main>
 
 
-            <section class="partners-section">
-                <div class="container">
-                    <div class="row justify-content-center align-items-center">
+<!-- JAVASCRIPT FILES -->
 
-                        <div class="col-lg-2 col-md-4 col-6">
-                            <img src="{% static 'images/partners/toprak-leasing.svg' %}" class="partners-image img-fluid">
-                        </div>
-
-                        <div class="col-lg-2 col-md-4 col-6">
-                            <img src="{% static 'images/partners/glorix.svg' %}" class="partners-image img-fluid">
-                        </div>
-                         <div class="col-lg-2 col-md-4 col-6">
-                            <img src="{% static 'images/partners/rolf-leasing.svg' %}" class="partners-image img-fluid">
-                        </div>
-
-                        <div class="col-lg-2 col-md-4 col-6">
-                            <img src="{% static 'images/partners/unilabs.svg' %}" class="partners-image img-fluid">
-                        </div>
-
-
-                        <div class="col-lg-2 col-md-4 col-6">
-                            <img src="{% static 'images/partners/woocommerce.svg' %}" class="partners-image img-fluid">
-                        </div>
-                    </div>
-
-
-                    </div>
-                </div>
-            </section>
-        </main>
-
-
-        <!-- JAVASCRIPT FILES -->
-       
-        {% endblock  %}
-
+{% endblock %}

@@ -1,592 +1,85 @@
 {% extends 'template.html' %}
 {% load static %}
 
-
 {% block content %}
-    
-        <header class="site-header">
-            <div class="container">
-                <div class="row">
-                    
-                    <div class="col-lg-12 col-12 d-flex flex-wrap">
-                        <p class="d-flex me-4 mb-0">
-                            <i class="bi-house-fill me-2"></i>
-                            DIT Design Studio
-                        </p>
+<main>
 
-                        <p class="d-flex d-lg-block d-md-block d-none me-4 mb-0">
-                            <i class="bi-clock-fill me-2"></i>
-                            <strong class="me-2">Mon - Fri</strong> 8:00 AM - 5:30 PM
-                        </p>
+    <section class="banner-section d-flex justify-content-center align-items-end">
+        <div class="section-overlay"></div>
 
-                        <p class="site-header-icon-wrap text-white d-flex mb-0 ms-auto">
-                            <i class="site-header-icon bi-whatsapp me-2"></i>
+        <div class="container">
+            <div class="row">
 
-                            <a href=" +255718894449" class="text-white">
-                                +255718894449
+                <div class="col-lg-7 col-12">
+                    <h1 class="text-white mb-lg-0">Services Listing</h1>
+                </div>
+
+                <div class="col-lg-4 col-12 d-flex justify-content-lg-end align-items-center ms-auto">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb justify-content-center">
+                            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+
+                            <li class="breadcrumb-item active" aria-current="page">Services Listing</li>
+                        </ol>
+                    </nav>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <div class="grid-container section-bg">
+        {% for service in services %}
+        <div class="services-thumb  mb-lg-0">
+            <div class="row">
+                <div class="col-lg-5 col-md-5 col-12">
+                    <div class="services-image-wrap">
+                        <a href="services-detail.html">
+                            <img src={{ service.image1.url }} class="services-image img-fluid" alt="">
+                            <img src={{ service.image2.url }} class="services-image services-image-hover img-fluid"
+                                alt="">
+
+                            <div class="services-icon-wrap">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <p class="text-white mb-0">
+
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+
+                <div class="col-lg-7 col-md-7 col-12 d-flex align-items-center">
+                    <div class="services-info mt-4 mt-lg-0 mt-md-0">
+                        <h4 class="services-title mb-1 mb-lg-2">
+                            <a class="services-title-link" href="services-detail.html">{{ service.name }}</a>
+                        </h4>
+
+                        <p>{{ service }}</p>
+
+                        <div class="d-flex flex-wrap align-items-center">
+
+
+                            <a href="services-detail.html" class="custom-btn btn button button--atlas mt-2 ms-auto">
+                                <span>Learn More</span>
+
+                                <div class="marquee" aria-hidden="true">
+                                    <div class="marquee__inner">
+                                        <span>Learn More</span>
+                                        <span>Learn More</span>
+                                        <span>Learn More</span>
+                                        <span>Learn More</span>
+                                    </div>
+                                </div>
                             </a>
-                        </p>
+                        </div>
                     </div>
-
                 </div>
             </div>
-        </header>
-
-        <nav class="navbar navbar-expand-lg">
-            <div class="container">
-                <a class="navbar-brand" href="index.html">
-                    <img src="{% static 'images/bubbles.png' %}" class="logo img-fluid" alt="">
-
-                    <span class="ms-2">Design Studio</span>
-                </a>
-
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item">
-                            <a class="nav-link active" href="index.html">Home</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="about.html">About Us</a>
-                        </li>
-
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#section_5" id="navbarLightDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">Our Services</a>
-
-                            <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarLightDropdownMenuLink">
-                                <li><a class="dropdown-item" href="services-detail.html">Education and Training</a></li>
-
-                                <li><a class="dropdown-item" href="PCB.html">PCB Design and Development</a></li>
-
-                                <li><a class="dropdown-item" href="CNC.html">CNC Machining and Laser Cutting</a></li>
-
-                                <li><a class="dropdown-item" href="prototyping.html">Prototyping and Testing</a></li>
-
-                                <li><a class="dropdown-item" href="application.html">Application Development</a></li>
-
-                                <li><a class="dropdown-item" href="software.html">Software developent</a></li>
-
-                                <li><a class="dropdown-item" href="CAD.html">CAM/CAD services</a></li>
-
-                                <li><a class="dropdown-item" href="3D.html">3D Printing and Scanning</a></li>
-                            </ul>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="news.html">News</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="contact.html">contact</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="projects.html">Projects</a>
-                        </li>
-
-                        <li class="nav-item ms-3">
-                            <a class="nav-link custom-btn custom-border-btn custom-btn-bg-white btn" href="about.html">Get started</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-
-        <main>
-
-            <section class="banner-section d-flex justify-content-center align-items-end">
-                <div class="section-overlay"></div>
-
-                <div class="container">
-                    <div class="row">
-
-                        <div class="col-lg-7 col-12">
-                            <h1 class="text-white mb-lg-0">Services Listing</h1>
-                        </div>
-
-                        <div class="col-lg-4 col-12 d-flex justify-content-lg-end align-items-center ms-auto">
-                            <nav aria-label="breadcrumb">
-                                <ol class="breadcrumb justify-content-center">
-                                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-
-                                    <li class="breadcrumb-item active" aria-current="page">Services Listing</li>
-                                </ol>
-                            </nav>
-                        </div>
-
-                    </div>
-                </div>
-            </section>
-
-
-            <section class="services-section section-padding">           
-                <div class="container">
-                    <div class="row">
-
-                        <div class="col-lg-6 col-12">
-                            <div class="services-thumb section-bg mb-lg-0">
-                                <div class="row">
-                                    <div class="col-lg-5 col-md-5 col-12">
-                                        <div class="services-image-wrap">
-                                            <a href="services-detail.html">
-                                                <img src="{% static 'images/services/people-taking-care-office-cleaning.jpg' %}" class="services-image img-fluid" alt="">
-                                                <img src="{% static 'images/services/person-taking-care-office.jpg' %}" class="services-image services-image-hover img-fluid" alt="">
-
-                                                <div class="services-icon-wrap">
-                                                    <div class="d-flex justify-content-between align-items-center">
-                                                        <p class="text-white mb-0">
-                                                            
-                                                    </div>                                                    
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-
-                                  
-                                    <div class="col-lg-7 col-md-7 col-12 d-flex align-items-center">
-                                        <div class="services-info mt-4 mt-lg-0 mt-md-0">
-                                            <h4 class="services-title mb-1 mb-lg-2">
-                                                <a class="services-title-link" href="services-detail.html">Education and Training</a>
-                                            </h4>
-
-                                            <p>Our education and training services are designed to help individuals and organizations improve their skills and knowledge in various areas</p>
-
-                                            <div class="d-flex flex-wrap align-items-center">
-                                               <!--  <div class="reviews-icons">
-                                                    <i class="bi-star-fill"></i>
-                                                    <i class="bi-star-fill"></i>
-                                                    <i class="bi-star-fill"></i>
-                                                    <i class="bi-star"></i>
-                                                    <i class="bi-star"></i>
-                                                </div> -->
-
-                                                <a href="services-detail.html" class="custom-btn btn button button--atlas mt-2 ms-auto">
-                                                    <span>Learn More</span>
-
-                                                    <div class="marquee" aria-hidden="true">
-                                                        <div class="marquee__inner">
-                                                            <span>Learn More</span>
-                                                            <span>Learn More</span>
-                                                            <span>Learn More</span>
-                                                            <span>Learn More</span>
-                                                        </div>
-                                                    </div>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                          <div class="col-lg-6 col-12">
-                            <div class="services-thumb section-bg mb-lg-0">
-                                <div class="row">
-                                    <div class="col-lg-5 col-md-5 col-12">
-                                        <div class="services-image-wrap">
-                                            <a href="3D.html">
-                                                <img src="{% static 'images/services/3D-image-1.jpg' %}" class="services-image img-fluid" alt="">
-                                                <img src="{% static 'images/services/3D-image-2.jpg' %}" class="services-image services-image-hover img-fluid" alt="">
-
-                                                <div class="services-icon-wrap">
-                                                    <div class="d-flex justify-content-between align-items-center">
-                                                        <p class="text-white mb-0">
-                                                            
-                                                    </div>                                                    
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-
-                                  
-                                    <div class="col-lg-7 col-md-7 col-12 d-flex align-items-center">
-                                        <div class="services-info mt-4 mt-lg-0 mt-md-0">
-                                            <h4 class="services-title mb-1 mb-lg-2">
-                                                <a class="services-title-link" href="3D.html">3D Printing and Scanning</a>
-                                            </h4>
-
-                                             <p>The studio facilitates workshops on numerous topics including Computer Aided Design, 3D printing, Laser cutting, Entrepreneurship, Pitching and Design...</p>
-
-                                            <div class="d-flex flex-wrap align-items-center">
-                                                <!-- <div class="reviews-icons">
-                                                    <i class="bi-star-fill"></i>
-                                                    <i class="bi-star-fill"></i>
-                                                    <i class="bi-star-fill"></i>
-                                                    <i class="bi-star"></i>
-                                                    <i class="bi-star"></i>
-                                                </div> -->
-
-                                                <a href="3D.html" class="custom-btn btn button button--atlas mt-2 ms-auto">
-                                                    <span>Read More</span>
-
-                                                    <div class="marquee" aria-hidden="true">
-                                                        <div class="marquee__inner">
-                                                            <span>Learn More</span>
-                                                            <span>Learn More</span>
-                                                            <span>Learn More</span>
-                                                            <span>Learn More</span>
-                                                        </div>
-                                                    </div>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </section>
-         
-
-            <section class="services-section section-padding section-bg">                
-                <div class="container">
-                    <div class="row">
-
-                        <div class="col-lg-6 col-12">
-                            <div class="services-thumb mb-lg-0">
-                                <div class="row">
-                                    <div class="col-lg-5 col-md-5 col-12">
-                                        <div class="services-image-wrap">
-                                            <a href="services-detail.html">
-                                                 <img src="{% static 'images/services/CNC-1.jpg' %}" class="services-image img-fluid" alt="">
-                                                 <img src="{% static 'images/services/CNC-2.jpg' %}" class="services-image services-image-hover img-fluid" alt="">
-                                
-
-                                                <div class="services-icon-wrap">
-                                                    <div class="d-flex justify-content-between align-items-center">
-                                                        <p class="text-white mb-0">
-                                                         
-                                                    </div>                                                    
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-lg-7 col-md-7 col-12 d-flex align-items-center">
-                                        <div class="services-info mt-4 mt-lg-0 mt-md-0">
-                                            <h4 class="services-title mb-1 mb-lg-2">
-                                                <a class="services-title-link" href="CNC.html">CNC Machining and Laser Cutting</a>
-                                            </h4>
-
-                                            <p>Our CNC machining and laser cutting services provide clients with the ability to create precise and detailed components for their products or ideas...</p>
-
-                                            <div class="d-flex flex-wrap align-items-center">
-                                                
-
-                                                <a href="CNC.html" class="custom-btn btn button button--atlas mt-2 ms-auto">
-                                                    <span>Read More</span>
-
-                                                    <div class="marquee" aria-hidden="true">
-                                                        <div class="marquee__inner">
-                                                            <span>Learn More</span>
-                                                            <span>Learn More</span>
-                                                            <span>Learn More</span>
-                                                            <span>Learn More</span>
-                                                        </div>
-                                                    </div>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-6 col-12">
-                            <div class="services-thumb mb-lg-0">
-                                <div class="row">
-                                    <div class="col-lg-5 col-md-5 col-12">
-                                        <div class="services-image-wrap">
-                                            <a href="3D.html">
-                                              <img src="{% static 'images/services/prototyping-1.jpg' %}" class="services-image img-fluid" alt="">
-                                              <img src="{% static 'images/services/prototyping-2.jpg' %}" class="services-image services-image-hover img-fluid" alt="">
-
-                                                <div class="services-icon-wrap">
-                                                    <div class="d-flex justify-content-between align-items-center">
-                                                        <p class="text-white mb-0">
-                                                            <i class="bi-cash me-2"></i>
-                                                           
-                                                    </div>                                                    
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-
-                                       <div class="col-lg-7 col-md-7 col-12 d-flex align-items-center">
-                                        <div class="services-info mt-4 mt-lg-0 mt-md-0">
-                                            <h4 class="services-title mb-1 mb-lg-2">
-                                                <a class="services-title-link" href="prototyping.html">Prototyping and Testing</a>
-                                            </h4>
-
-                                            <p>Our prototyping and testing service offers clients the opportunity to create and test physical models of their products or ideas. We use advanced technologies...</p>
-
-                                            <a href="prototyping.html" class="custom-btn btn button button--atlas mt-2 ms-auto">
-                                                    <span>Read More</span>
-
-                                                    <div class="marquee" aria-hidden="true">
-                                                        <div class="marquee__inner">
-                                                            <span>Learn More</span>
-                                                            <span>Learn More</span>
-                                                            <span>Learn More</span>
-                                                            <span>Learn More</span>
-                                                        </div>
-                                                    </div>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </section>
-
-
-            <section class="services-section section-padding section-bg">                
-                <div class="container">
-                    <div class="row">
-
-                        <div class="col-lg-6 col-12">
-                            <div class="services-thumb mb-lg-0">
-                                <div class="row">
-                                    <div class="col-lg-5 col-md-5 col-12">
-                                        <div class="services-image-wrap">
-                                            <a href="PCB.html">
-                                                <img src="{% static 'images/services/PCB-2.jpg' %}" class="services-image img-fluid" alt="">
-                                                <img src="{% static 'images/services/PCB-1.jpg' %}" class="services-image services-image-hover img-fluid" alt="">
-                                                <div class="services-icon-wrap">
-                                                    <div class="d-flex justify-content-between align-items-center">
-                                                        
-                                                    </div>                                                    
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-lg-7 col-md-7 col-12 d-flex align-items-center">
-                                        <div class="services-info mt-4 mt-lg-0 mt-md-0">
-                                            <h4 class="services-title mb-1 mb-lg-2">
-                                                <a class="services-title-link" href="PCB.html">PCB Design and Development</a>
-                                            </h4>
-
-                                            <p>Our PCB design and development services provide clients with the ability to create customized printed circuit boards for their products or ideas...</p>
-
-                                            <div class="d-flex flex-wrap align-items-center">
-                                                
-
-                                                <a href="PCB.html" class="custom-btn btn button button--atlas mt-2 ms-auto">
-                                                    <span>Read More</span>
-
-                                                    <div class="marquee" aria-hidden="true">
-                                                        <div class="marquee__inner">
-                                                            <span>Read More</span>
-                                                            <span>Read More</span>
-                                                            <span>Read More</span>
-                                                            <span>Read More</span>
-                                                        </div>
-                                                    </div>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-6 col-12">
-                            <div class="services-thumb mb-lg-0">
-                                <div class="row">
-                                    <div class="col-lg-5 col-md-5 col-12">
-                                        <div class="services-image-wrap">
-                                            <a href="CAD.html">
-                                              <img src="{% static 'images/services/CAD-1.jpg' %}" class="services-image img-fluid" alt="">
-                                              <img src="{% static 'images/services/CAD-2.jpg' %}" class="services-image services-image-hover img-fluid" alt="">
-                                               
-
-                                                <div class="services-icon-wrap">
-                                                    <div class="d-flex justify-content-between align-items-center">
-                                                        <p class="text-white mb-0">
-                                                         
-                                                    </div>                                                    
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-lg-7 col-md-7 col-12 d-flex align-items-center">
-                                        <div class="services-info mt-4 mt-lg-0 mt-md-0">
-                                            <h4 class="services-title mb-1 mb-lg-2">
-                                                <a class="services-title-link" href="CAD.html">CAD/CAM services</a>
-                                            </h4>
-
-                                            <p>Our CAD/CAM services provide clients with the ability to create detailed and accurate models of their products or ideas. We use advanced software and equipment to produce 2D and 3D designs that can be used for prototyping, manufacturing, and testing.</p>
-
-                                           
-
-                                                <a href="CAD.html" class="custom-btn btn button button--atlas mt-2 ms-auto">
-                                                    <span>Read More</span>
-
-                                                    <div class="marquee" aria-hidden="true">
-                                                        <div class="marquee__inner">
-                                                            <span>Learn More</span>
-                                                            <span>Learn More</span>
-                                                            <span>Learn More</span>
-                                                            <span>Learn More</span>
-                                                        </div>
-                                                    </div>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </section>
-             <section class="services-section section-padding section-bg">                
-                <div class="container">
-                    <div class="row">
-
-                        <div class="col-lg-6 col-12">
-                            <div class="services-thumb mb-lg-0">
-                                <div class="row">
-                                    <div class="col-lg-5 col-md-5 col-12">
-                                        <div class="services-image-wrap">
-                                            <a href="PCB.html">
-                                                <img src="{% static 'images/services/software-2.jpg' %}" class="services-image img-fluid" alt="">
-                                                <img src="{% static 'images/services/software-1.jpg' %}" class="services-image services-image-hover img-fluid" alt="">
-                                                <div class="services-icon-wrap">
-                                                    <div class="d-flex justify-content-between align-items-center">
-                                                        
-                                                    </div>                                                    
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-lg-7 col-md-7 col-12 d-flex align-items-center">
-                                        <div class="services-info mt-4 mt-lg-0 mt-md-0">
-                                            <h4 class="services-title mb-1 mb-lg-2">
-                                                <a class="services-title-link" href="software.html">Software Development</a>
-                                            </h4>
-
-                                             <p>Our software development services provide clients with customized software solutions to meet their specific needs. We offer a range of services, including software design, development, and maintenance, as well as testing and... </p>
-
-                                            <div class="d-flex flex-wrap align-items-center">
-                                                
-
-                                                <a href="software.html" class="custom-btn btn button button--atlas mt-2 ms-auto">
-                                                    <span>Read More</span>
-
-                                                    <div class="marquee" aria-hidden="true">
-                                                        <div class="marquee__inner">
-                                                            <span>Read More</span>
-                                                            <span>Read More</span>
-                                                            <span>Read More</span>
-                                                            <span>Read More</span>
-                                                        </div>
-                                                    </div>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-6 col-12">
-                            <div class="services-thumb mb-lg-0">
-                                <div class="row">
-                                    <div class="col-lg-5 col-md-5 col-12">
-                                        <div class="services-image-wrap">
-                                            <a href="application.html">
-                                              <img src="{% static 'images/services/app-dev-1.jpg' %}" class="services-image img-fluid" alt="">
-                                              <img src="{% static 'images/services/app-dev-2.jpg' %}" class="services-image services-image-hover img-fluid" alt="">
-                                               
-
-                                                <div class="services-icon-wrap">
-                                                    <div class="d-flex justify-content-between align-items-center">
-                                                        <p class="text-white mb-0">
-                                                         
-                                                    </div>                                                    
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-lg-7 col-md-7 col-12 d-flex align-items-center">
-                                        <div class="services-info mt-4 mt-lg-0 mt-md-0">
-                                            <h4 class="services-title mb-1 mb-lg-2">
-                                                <a class="services-title-link" href="application.html">Application Devolopment</a>
-                                            </h4>
-
-                                            <p>Our app development services provide clients with the ability to create customized mobile applications for their business or organization.</p>
-
-                                           
-
-                                                <a href="application.html" class="custom-btn btn button button--atlas mt-2 ms-auto">
-                                                    <span>Read More</span>
-
-                                                    <div class="marquee" aria-hidden="true">
-                                                        <div class="marquee__inner">
-                                                            <span>Learn More</span>
-                                                            <span>Learn More</span>
-                                                            <span>Learn More</span>
-                                                            <span>Learn More</span>
-                                                        </div>
-                                                    </div>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </section>
-
-            <section class="partners-section">
-                <div class="container">
-                    <div class="row justify-content-center align-items-center">
-
-                        <div class="col-lg-12 col-12">
-                            <h4 class="partners-section-title bg-white shadow-lg">Trusted by companies</h4>
-                        </div>
-
-                        <div class="col-lg-2 col-md-4 col-6">
-                            <img src="{% static 'images/partners/toprak-leasing.svg' %}" class="partners-image img-fluid">
-                        </div>
-
-                        <div class="col-lg-2 col-md-4 col-6">
-                            <img src="{% static 'images/partners/glorix.svg' %}" class="partners-image img-fluid">
-                        </div>
-                         <div class="col-lg-2 col-md-4 col-6">
-                            <img src="{% static 'images/partners/rolf-leasing.svg' %}" class="partners-image img-fluid">
-                        </div>
-
-                        <div class="col-lg-2 col-md-4 col-6">
-                            <img src="{% static 'images/partners/unilabs.svg' %}" class="partners-image img-fluid">
-                        </div>
-
-
-                        <div class="col-lg-2 col-md-4 col-6">
-                            <img src="{% static 'images/partners/woocommerce.svg' %}" class="partners-image img-fluid">
-                        </div>
-
-                    </div>
-                </div>
-            </section>
-        </main>
-
-        <!-- JAVASCRIPT FILES -->
-        {% endblock  %}
+        </div>
+        {% endfor %}
+    </div>
+</main>
+{% endblock %}

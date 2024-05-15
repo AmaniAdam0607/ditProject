@@ -13,6 +13,12 @@ class Services(models.Model):
         else:
             return self.description
 
+    def short_describe(self):
+        if len(self.description) > 100:
+            return self.description[:100] + "..."
+        else:
+            return self.description
+
 
 class Post(models.Model):
     name = models.CharField(max_length=200)

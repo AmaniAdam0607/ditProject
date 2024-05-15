@@ -3,297 +3,54 @@
 
 
 {% block content %}
+<main>
 
-<header class="site-header">
-    <div class="container">
-        <div class="row">
-            
-            <div class="col-lg-12 col-12 d-flex flex-wrap">
-                <p class="d-flex me-4 mb-0">
-                    <i class="bi-house-fill me-2"></i>
-                    DIT Design Studio
-                </p>
+    <section class="banner-section d-flex justify-content-center align-items-end">
+        <div class="section-overlay"></div>
 
-                <p class="d-flex d-lg-block d-md-block d-none me-4 mb-0">
-                    <i class="bi-clock-fill me-2"></i>
-                    <strong class="me-2">Mon - Fri</strong> 8:00 AM - 5:30 PM
-                </p>
+        <div class="container">
+            <div class="row">
 
-                <p class="site-header-icon-wrap text-white d-flex mb-0 ms-auto">
-                    <i class="site-header-icon bi-whatsapp me-2"></i>
+                <div class="col-lg-7 col-12">
+                    <h1 class="text-white mb-lg-0">News</h1>
+                </div>
 
-                    <a href=" +255718894449" class="text-white">
-                        +255718894449
-                    </a>
-                </p>
+                <div class="col-lg-4 col-12 d-flex justify-content-lg-end align-items-center ms-auto">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb justify-content-center">
+                            <li class="breadcrumb-item"><a href={% url 'home' %}>Home</a></li>
+
+                            <li class="breadcrumb-item active" aria-current="page">News</li>
+                        </ol>
+                    </nav>
+                </div>
+
             </div>
-
         </div>
-    </div>
-</header>
+    </section>
 
-<nav class="navbar navbar-expand-lg">
-    <div class="container">
-        <a class="navbar-brand" href="index.html">
-            <img src="{% static 'images/bubbles.png' %}" class="logo img-fluid" alt="">
 
-            <span class="ms-2">Design Studio</span>
-        </a>
+    <section class="section-padding">
+        <div class="container">
+            <div class="row">
 
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+                <div class="col-lg-6 col-12">
+                    <img src="{% static 'images/cleaning-concept-with-man-showing-business-card.jpg' %}"
+                        class="featured-image img-fluid">
+                </div>
 
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item">
-                    <a class="nav-link active" href="index.html">Home</a>
-                </li>
+                <div class="col-lg-6 col-12">
+                    <div class="featured-block">
+                        <h2 class="mb-4">{{ post.name }}</h2>
+                        <h6 style="font-size: x-small;">Uploaded in: {{ post.dateUpload }}</h6>
 
-                <li class="nav-item">
-                    <a class="nav-link" href="about.html">About Us</a>
-                </li>
+                        <p>{{ post.description }}</p>
 
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#section_5" id="navbarLightDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">Our Services</a>
+                    </div>
+                </div>
 
-                    <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarLightDropdownMenuLink">
-                        <li><a class="dropdown-item" href="services-detail.html">Education and Training</a></li>
-
-                        <li><a class="dropdown-item" href="PCB.html">PCB Design and Development</a></li>
-
-                        <li><a class="dropdown-item" href="CNC.html">CNC Machining and Laser Cutting</a></li>
-
-                        <li><a class="dropdown-item" href="prototyping.html">Prototyping and Testing</a></li>
-
-                        <li><a class="dropdown-item" href="application.html">Application Development</a></li>
-
-                        <li><a class="dropdown-item" href="software.html">Software developent</a></li>
-
-                        <li><a class="dropdown-item" href="CAD.html">CAM/CAD services</a></li>
-
-                        <li><a class="dropdown-item" href="3D.html">3D Printing and Scanning</a></li>
-                    </ul>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link" href="news.html">News</a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link" href="contact.html">contact</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="projects.html">Projects</a>
-                </li>
-
-                <li class="nav-item ms-3">
-                    <a class="nav-link custom-btn custom-border-btn custom-btn-bg-white btn" href="about.html">Get started</a>
-                </li>
-            </ul>
+            </div>
         </div>
-    </div>
-</nav>
-
-
-        <main>
-
-            <section class="banner-section d-flex justify-content-center align-items-end">
-                <div class="section-overlay"></div>
-
-                <div class="container">
-                    <div class="row">
-
-                        <div class="col-lg-7 col-12">
-                            <h1 class="text-white mb-lg-0">News</h1>
-                        </div>
-
-                        <div class="col-lg-4 col-12 d-flex justify-content-lg-end align-items-center ms-auto">
-                            <nav aria-label="breadcrumb">
-                                <ol class="breadcrumb justify-content-center">
-                                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-
-                                    <li class="breadcrumb-item active" aria-current="page">News</li>
-                                </ol>
-                            </nav>
-                        </div>
-
-                    </div>
-                </div>
-            </section>
-         
-
-          <section class="section-padding">
-                <div class="container">
-                    <div class="row">
-
-                        <div class="col-lg-6 col-12">
-                            <img src="{% static 'images/cleaning-concept-with-man-showing-business-card.jpg' %}" class="featured-image img-fluid">
-                        </div>
-
-                        <div class="col-lg-6 col-12">
-                            <div class="featured-block">
-                                <h2 class="mb-4">{{ post.name }}</h2>
-                                <h6 style="font-size: x-small;">Uploaded in: {{ post.dateUpload }}</h6>
-
-                                <p>{{ post.description }}</p>
-                              
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </section>
-
-             <section class="section-padding section-bg">
-                <div class="container">
-                    <div class="row">
-
-                        <div class="col-lg-12 col-12">
-                            <h2 class="mb-4">Other News</h2>
-                        </div>
-
-                        <div class="col-lg-6 col-12">
-                            <div class="services-thumb mb-lg-0">
-                                <div class="row">
-                                    <div class="col-lg-5 col-md-5 col-12">
-                                        <div class="services-image-wrap">
-                                            <a href="prototyping.html">
-                                                <img src="{% static 'images/services/prototyping-1.jpg' %}" class="services-image img-fluid" alt="">
-                                                <img src="{% static 'images/services/prototyping-3.jpg' %}" class="services-image services-image-hover img-fluid" alt="">
-
-                                                <div class="services-icon-wrap">
-                                                    <div class="d-flex justify-content-between align-items-center">
-                                                        
-                                                    </div>                                                    
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-lg-7 col-md-7 col-12 d-flex align-items-center">
-                                        <div class="services-info mt-4 mt-lg-0 mt-md-0">
-                                            <h4 class="services-title mb-1 mb-lg-2">
-                                                <a class="services-title-link" href="prototyping.html">Prototyping and Testing</a>
-                                            </h4>
-
-                                            <p>Our prototyping and testing service offers clients the opportunity to create and test physical models of their products or ideas</p>
-
-                                            <div class="d-flex flex-wrap align-items-center">
-                                                 
-
-                                                <a href="news-details.html" class="custom-btn btn button button--atlas mt-2 ms-auto">
-                                                    <span>Learn More</span>
-
-                                                    <div class="marquee" aria-hidden="true">
-                                                        <div class="marquee__inner">
-                                                            <span>Learn More</span>
-                                                            <span>Learn More</span>
-                                                            <span>Learn More</span>
-                                                            <span>Learn More</span>
-                                                        </div>
-                                                    </div>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-6 col-12">
-                            <div class="services-thumb mb-lg-0">
-                                <div class="row">
-                                    <div class="col-lg-5 col-md-5 col-12">
-                                        <div class="services-image-wrap">
-                                            <a href="news-details.html">
-                                                <img src="{% static 'images/services/CAD-1.jpg' %}" class="services-image img-fluid" alt="">
-                                                <img src="{% static 'images/services/CAD-2.jpg' %}" class="services-image services-image-hover img-fluid" alt="">
-
-                                                <div class="services-icon-wrap">
-                                                    <div class="d-flex justify-content-between align-items-center">
-                                                        
-
-                                                    </div>                                                    
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-lg-7 col-md-7 col-12 d-flex align-items-center">
-                                        <div class="services-info mt-4 mt-lg-0 mt-md-0">
-                                            <h4 class="services-title mb-1 mb-lg-2">
-                                                <a class="services-title-link" href="CAD.html">CAD/CAM services</a>
-                                            </h4>
-
-                                            <p>Amoung the best innovative ideas we have is the Drones for different purposes we are designing them directly from our Studion</p>
-
-                                            <div class="d-flex flex-wrap align-items-center">
-                                                <!-- <div class="reviews-icons">
-                                                    <i class="bi-star-fill"></i>
-                                                    <i class="bi-star-fill"></i>
-                                                    <i class="bi-star-fill"></i>
-                                                    <i class="bi-star-fill"></i>
-                                                    <i class="bi-star"></i>
-                                                </div> -->
-
-                                                <a href="news-details.html" class="custom-btn btn button button--atlas mt-2 ms-auto">
-                                                    <span>Learn More</span>
-
-                                                    <div class="marquee" aria-hidden="true">
-                                                        <div class="marquee__inner">
-                                                            <span>Learn More</span>
-                                                            <span>Learn More</span>
-                                                            <span>Learn More</span>
-                                                            <span>Learn More</span>
-                                                        </div>
-                                                    </div>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </section> 
-            <section class="partners-section">
-                <div class="container">
-                    <div class="row justify-content-center align-items-center">
-
-                        <div class="col-lg-12 col-12">
-                            <h4 class="partners-section-title bg-white shadow-lg">Trusted by companies</h4>
-                        </div>
-                        <div class="col-lg-2 col-md-4 col-6">
-                            <img src="{% static 'images/partners/toprak-leasing.svg' %}" class="partners-image img-fluid">
-                        </div>
-
-                        <div class="col-lg-2 col-md-4 col-6">
-                            <img src="{% static 'images/partners/glorix.svg' %}" class="partners-image img-fluid">
-                        </div>
-                         <div class="col-lg-2 col-md-4 col-6">
-                            <img src="{% static 'images/partners/rolf-leasing.svg' %}" class="partners-image img-fluid">
-                        </div>
-
-                        <div class="col-lg-2 col-md-4 col-6">
-                            <img src="{% static 'images/partners/unilabs.svg' %}" class="partners-image img-fluid">
-                        </div>
-
-
-                        <div class="col-lg-2 col-md-4 col-6">
-                            <img src="{% static 'images/partners/woocommerce.svg' %}" class="partners-image img-fluid">
-                        </div>
-                    </div>
-
-
-                    </div>
-                </div>
-            </section>
-        </main>
-
-
-        <!-- JAVASCRIPT FILES -->
-       
-        {% endblock  %}
+    </section>
+</main>
+{% endblock %}
