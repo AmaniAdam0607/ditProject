@@ -56,3 +56,10 @@ class Project(models.Model):
 
     def __str__(self):
         return self.name
+
+
+class Staff(models.Model):
+    name = models.CharField(max_length=250)
+    image = models.ImageField(upload_to="images", default="default.jpeg")
+    statusDescription = models.TextField()
+    contact = models.CharField(max_length=15)

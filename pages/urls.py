@@ -11,4 +11,5 @@ urlpatterns = [
     path("projects/", views.projectPage, name="projects"),
     path("projects/<int:year>", views.projectDetail, name="project_detail"),
     path("projects/desc/<int:id>", views.singleProjectDetail, name="single_project"),
+    path("contact/", views.contactPage, name="contact"),
 ]
