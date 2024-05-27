@@ -57,24 +57,11 @@
                 <div class="col-lg-6 col-12">
                     <h2 class="mb-4">Learning &amp; Exploring <br> Designings</h2>
 
-                    <p>The DIT<a href="{% url 'home' %}">Design Studio</a>
-                        is the result of a collaboration between the Dar es Salaam Institute of Technology (DIT) and
-                        Rice 360° Institute for Global Health (Rice 360°) with support from the Lemelson Foundation.
-                        It follows from both institutes’ commitment to the advancement of students’ practical
-                        professional skills.</p>
-
-                    <p>The DIT curriculum embodies the ‘teaching factory’ approach, where technical training is
-                        directly linked to real-life industry. Similarly, the Rice 360° Institute’s Leading in
-                        Invention Education workstream is focused on expanding and sharing their model of invention
-                        and entrepreneurship education. These synergistic approaches have led to their collaboration
-                        that includes faculty development workshops, international student exchanges and
-                        internships, and the Design Studio – a focal point for active learning and innovative
-                        thinking.</p>
+                    {{ metadata.who_we_are_description }}
                 </div>
 
                 <div class="col-lg-6 col-12 custom-block-wrap">
-                    <img src="{% static 'images/male-wearing-apron-female-white-t-shirt-smiling-broadly-being-glad-clean.png' %}"
-                        class="img-fluid">
+                    <img src={{ metadata.who_we_are_image.url }} class="img-fluid">
                 </div>
 
             </div>
